@@ -7,6 +7,8 @@ import { HeroService } from '../hero.service';
 })
 export class HeroeslistComponent implements OnInit {
   heroes: any = [];
+  selectedHero: any;
+  click: boolean = true;
 
   constructor(private heroservice: HeroService) {}
   getHeroes() {
@@ -14,5 +16,10 @@ export class HeroeslistComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getHeroes();
+  }
+  onclick(data: any) {
+    this.selectedHero = data;
+    // console.warn(this.selectedHero);
+    // this.click = false;
   }
 }

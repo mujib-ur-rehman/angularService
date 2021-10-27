@@ -1,0 +1,10 @@
+<div *ngIf="hero">
+  <h1>Edit Hero List</h1>
+  <p>{{hero.id}}</p>
+  <p>{{hero.name}}</p>
+  <form #heroform="ngForm" (ngSubmit)="onKey(heroform.value)">
+    <input ngModel name="hero2" placeholder="edit name">
+    <button>Submit</button>
+  </form>
+  <p>{{hero2.name}}</p>
+</div>
