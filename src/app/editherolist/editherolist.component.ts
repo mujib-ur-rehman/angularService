@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Hero } from '../heroeinterface';
 
 @Component({
   selector: 'app-editherolist',
@@ -8,13 +9,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class EditherolistComponent implements OnInit {
   constructor() {}
   @Input() hero: any;
-  @Output() hero2: EventEmitter<any> = new EventEmitter();
   onKey(data: any) {
-    this.hero2 = data.name;
-    console.warn(this.hero2);
+    console.warn(this.hero);
   }
 
-  ngOnInit(): void {
-    this.hero2.emit(this.hero2);
-  }
+  ngOnInit(): void {}
 }

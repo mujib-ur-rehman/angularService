@@ -1,7 +1,6 @@
 <h1>Lit of Heroes</h1>
-<p>{{heroes.id}}</p>
 <span *ngFor="let hero of heroes" (click)="onclick(hero)">
 
   {{hero.id}}{{hero.name}}<br>
 </span>
-<app-editherolist [hero]="selectedHero" (hero2)='selectedHero.name'></app-editherolist>
+<app-editherolist [hero]="selectedHero"></app-editherolist>
