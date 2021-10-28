@@ -10,4 +10,7 @@ export class HeroService {
   getHeroes(): Hero[] {
     return HEROES;
   }
+  updateHero(): any {
+    return HEROES * HEROES;
+  }
 }

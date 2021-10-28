@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Hero } from '../heroeinterface';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-editherolist',
@@ -7,8 +8,14 @@ import { Hero } from '../heroeinterface';
   styleUrls: ['./editherolist.component.css']
 })
 export class EditherolistComponent implements OnInit {
-  constructor() {}
+  constructor(private heroservice: HeroService) {}
+
   @Input() hero: any;
+
+  updateHero() {
+    this.hero = this.heroservice.updateHero();
+  }
+
   onKey(data: any) {
     console.warn(this.hero);
   }

@@ -2,7 +2,7 @@
   <h1>Edit Hero List</h1>
   <p>{{hero.id}}</p>
   <p>{{hero.name}}</p>
-  <form #heroform="ngForm" (ngSubmit)="onKey(heroform.value)">
+  <form *ngIf="hero" #heroform="ngForm" (ngSubmit)="onKey(heroform.value)">
     <input [(ngModel)]="hero.name" name="hero2name" placeholder="edit name">
     <button>Submit</button>
   </form>
